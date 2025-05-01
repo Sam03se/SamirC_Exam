@@ -33,5 +33,25 @@ public class ColaHeroe {
             System.out.println("La cola esta vacia:");
         }
     }
+
+    public void eliminarHeroe(){
+        Heroe eliminado=cola.poll();
+        if(eliminado != null){
+            System.out.println("Heroe eliminado");
+            eliminado.mostrar();
+        }else{
+            System.out.println("No existen heroes en la cola");
+        }
+    }
+    public void mostrarCola(){
+        if(cola.isEmpty()){
+            System.out.println("La cola de heroes se encuentra vacia");
+        }else{
+            System.out.println("Heroes que se encuentran en la cola");
+            for (Heroe e: cola){
+                e.mostrar();
+            }
+        }
+    }
 }
 
